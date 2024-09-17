@@ -18,23 +18,35 @@ const CreatePostPage = () => {
   };
 
   return (
-    <div className="mt-8">
-      <h1 className="text-3xl font-bold mb-4">Create New Post</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Post Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          className="w-full p-2 border border-gray-300 mb-4"
-        />
-        <textarea
-          placeholder="Post Content"
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          className="w-full p-2 border border-gray-300 mb-4"
-        />
-        <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded-md">
+    <div className="w-1/2 mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+      <h1 className="text-3xl font-bold mb-6 text-center">Create New Post</h1>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="block mb-2 font-semibold text-gray-700">Post Title</label>
+          <input
+            type="text"
+            placeholder="Enter your post title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            required
+          />
+        </div>
+        <div>
+          <label className="block mb-2 font-semibold text-gray-700">Post Content</label>
+          <textarea
+            placeholder="Enter your post content"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            rows={6}
+            className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-green-500 text-white px-4 py-3 rounded-md font-semibold hover:bg-green-600 transition duration-300"
+        >
           Create Post
         </button>
       </form>
