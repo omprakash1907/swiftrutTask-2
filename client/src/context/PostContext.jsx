@@ -8,7 +8,7 @@ export const PostProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/posts")
+      .get("https://blogtask-ykft.onrender.com/api/posts")
       .then((res) => {
         setPosts(res.data);
       })
