@@ -27,7 +27,7 @@ const HomePage = () => {
               </div>
 
               <Link to={`/post/${post._id}`}>
-                <h2 className="inline-block text-xl font-bold text-gray-900 mb-2 bg-blue-100 px-4 py-2 rounded-lg hover:bg-blue-200 hover:shadow-md transition duration-200 ease-in-out">
+                <h2 className="inline-block text-xl font-bold text-gray-900 mb-2 bg-blue-100 px-4 py-2 rounded-lg hover:bg-blue-200 hover:shadow-md transition duration-200 ease-in-out w-full">
                   {post.title}
                 </h2>
               </Link>

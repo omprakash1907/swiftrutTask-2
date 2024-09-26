@@ -12,7 +12,7 @@ const CreatePostPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = { title, content };
-    const response = await axios.post('http://localhost:5000/api/posts', newPost);
+    const response = await axios.post('https://blogtask-ykft.onrender.com/api/posts', newPost);
     addPost(response.data);
     navigate('/');
   };

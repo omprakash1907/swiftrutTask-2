@@ -11,7 +11,7 @@ const EditPost = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/posts/${id}`).then((res) => {
+    axios.get(`https://blogtask-ykft.onrender.com/api/posts/${id}`).then((res) => {
       setTitle(res.data.title);
       setContent(res.data.content);
     });
@@ -20,7 +20,7 @@ const EditPost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const updatedPost = { title, content };
-    const response = await axios.put(`http://localhost:5000/api/posts/${id}`, updatedPost);
+    const response = await axios.put(`https://blogtask-ykft.onrender.com/api/posts/${id}`, updatedPost);
     updatePost(response.data);
     navigate(`/post/${id}`);
   };

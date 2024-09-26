@@ -12,12 +12,12 @@ const PostDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/posts/${id}`)
+      .get(`https://blogtask-ykft.onrender.com/api/posts/${id}`)
       .then((res) => setPost(res.data));
   }, [id]);
 
   const handleDelete = async () => {
-    await axios.delete(`http://localhost:5000/api/posts/${id}`);
+    await axios.delete(`https://blogtask-ykft.onrender.com/api/posts/${id}`);
     deletePost(id);
     navigate("/");
   };
